@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Core palette */
+  --bg:        #080b10;
+  --bg-2:      #0d1117;
+  --bg-3:      #111820;
+  --bg-4:      #162030;
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.12);
+
+  /* Text */
+  --text-1:    #f0f4ff;
+  --text-2:    #a8b4c8;
+  --text-3:    #6b7a90;
+  --text-4:    #3d4d60;
+
+  /* Accent — electric cyan */
+  --accent:    #00d4ff;
+  --accent-dim:#003d4d;
+  --accent-glow: 0 0 20px rgba(0,212,255,0.25);
+
+  /* Semantic */
+  --green:     #00e5a0;
+  --green-dim: #002b1f;
+  --yellow:    #f5c542;
+  --yellow-dim:#2b2200;
+  --red:       #ff4566;
+  --red-dim:   #2b0011;
+  --purple:    #a78bfa;
+  --purple-dim:#1a1030;
+  --blue:      #3b82f6;
+  --blue-dim:  #0a1830;
+
+  /* Layout */
+  --sidebar-w: 220px;
+  --sidebar-w-collapsed: 60px;
+  --topbar-h:  56px;
+  --radius:    8px;
+  --radius-lg: 14px;
+
+  /* Fonts */
+  --font:      'Syne', system-ui, sans-serif;
+  --mono:      'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --t:         150ms ease;
+  --t-slow:    280ms ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 14px; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-1);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-4); }
+
+/* Selection */
+::selection { background: rgba(0,212,255,0.2); color: var(--text-1); }
+
+/* Typography */
+h1,h2,h3,h4 { font-weight: 700; line-height: 1.2; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.mono { font-family: var(--mono); }
+.text-dim { color: var(--text-3); }
+.text-muted { color: var(--text-4); }
+.text-ok { color: var(--green); }
+.text-warn { color: var(--yellow); }
+.text-danger { color: var(--red); }
+.text-accent { color: var(--accent); }
+.text-center { text-align: center; }
